@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Fullstack CSV Upload APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mechanic's tools management app.
 
-## Available Scripts
+## INSTALLATION
 
-In the project directory, you can run:
+To install this app, please follow these steps:
 
-### `npm start`
+Clone this repository: https://github.com/lsegouras/app-tools-control.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install required dependencies: npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Start the application at frontend: npm start
 
-### `npm test`
+Start the server at backend: npm run dev
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open the aplication in your browser: http://localhost:3000
 
-### `npm run build`
+## FEATURES
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- List (GET), create(POST), edit(PUT), update status(PUT) and delete(DELETE) tools, mechanics and loans (frontend code still on going). obs.: all the routes in backend already coded and tested on Postman.
+- CSV view: the app parses the CSV data and displays in cards.
+- Search Bar: users can search data in the cards.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## TECHNOLOGIES
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend: React.js
 
-### `npm run eject`
+Deps Frontend: react, react-dom, react-router-dom, react-scrips, react-toastify,axios, react-icons
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Backend: Node.js, Express.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deps Backend: express, cors, dotenv, fs, sequelize, pg, pgnodemon, pg-hstore, body-parser
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Database: Postgres
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+IDE - Visual Studio Code
