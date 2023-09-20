@@ -13,6 +13,8 @@ import Form from "./components/Form";
 
 function App() {
   const [mechanics, setMechanics] = useState([]);
+  const [tools, setTools] = useState([]);
+  const [loans, setLoans] = useState([]);
   const [onEdit, setOnEdit] = useState(null);
 
   const getMechanics = async () => {
@@ -27,6 +29,32 @@ function App() {
   useEffect(() => {
     getMechanics();
   }, [setMechanics]);
+
+  const getTools = async () => {
+    try {
+      const res = await axios.get("http://localhost:3333/tools");
+      setMechanics(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getTools();
+  }, [setTools]);
+
+  const getLoans = async () => {
+    try {
+      const res = await axios.get("http://localhost:3333/loans");
+      setMechanics(res.data);
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getLoans();
+  }, [setLoans]);
 
   return (
     <>
@@ -43,6 +71,8 @@ function App() {
               <Grid
                 setOnEdit={setOnEdit}
                 mechanics={mechanics}
+                tools={tools}
+                loans={loans}
                 setMechanics={setMechanics}
               />
             }
@@ -54,6 +84,8 @@ function App() {
                 onEdit={onEdit}
                 setOnEdit={setOnEdit}
                 getMechanics={getMechanics}
+                getTools={getTools}
+                getLoans={getLoans}
               />
             }
           />

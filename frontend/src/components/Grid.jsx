@@ -3,7 +3,7 @@ import { FaTrash, FaEdit } from "react-icons/fa";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Grid = ({ mechanics, setMechanics, setOnEdit }) => {
+const Grid = ({ mechanics, tools, loans, setMechanics, setOnEdit }) => {
   const handleEdit = (item) => {
     setOnEdit(item);
   };
