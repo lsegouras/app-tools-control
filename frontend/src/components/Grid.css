@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px opx 5px #ccc;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 20px auto;
+  word-break: break-all;
+}
+
+.table thread {
+  text-align: start;
+  border-bottom: inset;
+  padding-bottom: 5px;
+}
+
+.table td {
+  padding-top: 15px;
+  text-align: center;
+  width: auto;
+}
