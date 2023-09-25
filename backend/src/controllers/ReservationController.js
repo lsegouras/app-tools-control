@@ -37,14 +37,14 @@ class ReservationController {
       .catch(next);
   }
 
-  static async findByToolAndStatus(req, res, next) {
-    ReservationService.findByToolAndStatus(req)
+  static async findByTool(req, res, next) {
+    ReservationService.findByTool(req)
       .then((obj) => res.json(obj))
       .catch(next);
   }
 
-  static async findByMechanicAndPeriod(req, res, next) {
-    ReservationService.findByMechanicAndPeriod(req)
+  static async findByMechanic(req, res, next) {
+    ReservationService.findByMechanic(req)
       .then((obj) => res.json(obj))
       .catch(next);
   }

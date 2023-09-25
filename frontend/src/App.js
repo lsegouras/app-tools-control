@@ -12,11 +12,11 @@ import Grid from "./components/Grid";
 import Form from "./components/Form";
 
 function App() {
-  const [mechanics, setMechanics] = useState([]);
   const [tools, setTools] = useState([]);
   const [loans, setLoans] = useState([]);
   const [onEdit, setOnEdit] = useState(null);
 
+  const [mechanics, setMechanics] = useState([]);
   const getMechanics = async () => {
     try {
       const res = await axios.get("http://localhost:3333/mechanics");
@@ -65,7 +65,7 @@ function App() {
           <Route path="/mechanics" element={<Mechanics Grid={Grid} />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/loans" element={<Loans />} />
-          <Route
+          {/* <Route
             path="/grid"
             element={
               <Grid
@@ -88,7 +88,7 @@ function App() {
                 getLoans={getLoans}
               />
             }
-          />
+          /> */}
         </Routes>
       </BrowserRouter>
     </>

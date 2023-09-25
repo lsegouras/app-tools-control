@@ -49,12 +49,12 @@ routes.put("/reservations/:id", ReservationController.update);
 routes.put("/reservationStatus/:id", ReservationController.updateStatus);
 routes.delete("/reservations/:id", ReservationController.delete);
 routes.get(
-  "/reservations/findByToolAndStatus/:toolId/:status",
-  ReservationController.findByToolAndStatus
+  "/reservations/findByTool/:toolId",
+  ReservationController.findByTool
 );
 routes.get(
-  "/reservations/findByMechanicAndPeriod/:mechanicId/:start/:end",
-  ReservationController.findByMechanicAndPeriod
+  "/reservations/findByMechanic/:mechanicId",
+  ReservationController.findByMechanic
 );
 routes.get(
   "/reservations/findAmountOfReservationssOfMechanicsByPeriod/:start/:end",

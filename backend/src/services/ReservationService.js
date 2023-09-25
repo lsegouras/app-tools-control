@@ -80,38 +80,25 @@ class ReservationService {
     return obj;
   }
 
-  static async findByToolAndStatusRN(toolId, status) {
+  static async findByTool(req) {
+    const { toolId } = req.params;
     const objs = await sequelize.query(
-      "SELECT * FROM reservations WHERE reservations.tool_id = :toolId AND reservations.status = :status",
+      "SELECT * FROM reservations WHERE reservations.tool_id = :toolId",
       {
-        replacements: { toolId: toolId, status: status },
+        replacements: { toolId: toolId },
         type: QueryTypes.SELECT,
       }
     );
     return objs;
   }
 
-  static async findBytoolAndStatus(req) {
-    const { toolId, status } = req.params;
+  static async findByMechanic(req) {
+    const { mechanicId } = req.params;
     const objs = await sequelize.query(
-      "SELECT * FROM reservations WHERE reservations.tool_id = :toolId AND reservations.status = :status",
-      {
-        replacements: { toolId: toolId, status: status },
-        type: QueryTypes.SELECT,
-      }
-    );
-    return objs;
-  }
-
-  static async findByMechanicAndPeriod(req) {
-    const { mechanicId, start, end } = req.params;
-    const objs = await sequelize.query(
-      "SELECT * FROM reservations WHERE reservations.mechanic_id = :mechanicId AND reservations.date > :start AND reservations.date < :end",
+      "SELECT * FROM reservations WHERE reservations.mechanic_id = :mechanicId",
       {
         replacements: {
           mechanicId: mechanicId,
-          start: start,
-          end: end,
         },
         type: QueryTypes.SELECT,
       }
