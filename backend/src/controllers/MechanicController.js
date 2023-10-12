@@ -30,6 +30,12 @@ class MechanicController {
       .then((obj) => res.json(obj))
       .catch(next);
   }
+
+  static async login(req, res, next) {
+    MechanicService.login(req)
+      .then((obj) => res.json(obj))
+      .catch(next);
+  }
 }
 
 export { MechanicController };

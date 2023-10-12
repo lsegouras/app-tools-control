@@ -8,6 +8,9 @@ import { ReservationController } from "../controllers/ReservationController.js";
 
 const routes = express.Router();
 
+//LOGIN ROUTES
+routes.post("/login", MechanicController.login);
+
 //MECHANICS ROUTES
 routes.get("/mechanics", MechanicController.findAll);
 routes.get("/mechanics/:id", MechanicController.findByPk);

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Tools() {
   const [tools, setTools] = useState([]);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getTools();
@@ -21,6 +24,10 @@ function Tools() {
   };
   if (error) return "Sorry we are having problems to access the tools list";
 
+  const handleToolView = () => {
+    navigate("/viewTool");
+  };
+
   return (
     <div className="tools">
       <h1>Available Tools</h1>
@@ -29,6 +36,7 @@ function Tools() {
         <div key={tool.id}>
           <span>Tool Name: {tool.name}</span> <br />
           <span>Tool Description: {tool.description}</span>
+          <button onClick={handleToolView}>View</button>
           <hr />
         </div>
       ))}
