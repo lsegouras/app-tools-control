@@ -30,10 +30,10 @@ const Registration = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "origin",
+          "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
         },
-        body: data,
+        body: JSON.stringify(data),
       });
     } catch (err) {
       console.log(err.response.data.message);
@@ -48,7 +48,8 @@ const Registration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addMechanic();
-    context.setFullName(fullName);
+    console.log(data.fullName);
+    context.setFullName(data.fullName);
     navigate("/home");
   };
 
