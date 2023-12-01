@@ -5,10 +5,11 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Loans from "./pages/Loans";
 import Mechanics from "./pages/Mechanics";
-import Tools from "./pages/Tools";
+// import Tools from "./pages/Tools";
 import MyProvider from "./context/MyProvider";
-import GetTool from "./pages/GetTool";
 import Registration from "./pages/Registration";
+import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/home" element={<Home />} />
             <Route path="/mechanics" element={<Mechanics />} />
-            <Route path="/tools" element={<Tools />} />
-            <Route path="/viewTool" element={<GetTool />} />
+            {/* <Route path="/tools" element={<Tools />} /> */}
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin-login" element={<AdminLogin />} />
             <Route path="/loans" element={<Loans />} />
 
             {/* <Route
