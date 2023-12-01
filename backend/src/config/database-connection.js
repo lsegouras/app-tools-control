@@ -7,6 +7,7 @@ import Devolution from "../models/Devolution.js";
 import LoanItem from "../models/LoanItem.js";
 import Loan from "../models/Loan.js";
 import Reservation from "../models/Reservation.js";
+import Admin from "../models/Admin.js";
 
 const sequelize = new Sequelize(databaseConfig);
 
@@ -16,6 +17,7 @@ Devolution.init(sequelize);
 LoanItem.init(sequelize);
 Loan.init(sequelize);
 Reservation.init(sequelize);
+Admin.init(sequelize);
 
 // Mechanic.associate(sequelize.models);
 // Tool.associate(sequelize.models);

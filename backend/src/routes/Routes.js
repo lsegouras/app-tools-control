@@ -5,8 +5,15 @@ import { ToolController } from "../controllers/ToolController.js";
 import { LoanController } from "../controllers/LoanController.js";
 import { DevolutionController } from "../controllers/DevolutionController.js";
 import { ReservationController } from "../controllers/ReservationController.js";
+import { AdminController } from "../controllers/AdminController.js";
 
 const routes = express.Router();
+
+//ADMIN ROUTES
+routes.post("/admin", AdminController.login);
+routes.post("/create-admin", AdminController.create);
+
+
 
 //LOGIN ROUTES
 routes.post("/login", MechanicController.login);
