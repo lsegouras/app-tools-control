@@ -1,31 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  background-color: #0d0c3a;
-  height: 90vh;
-  padding: 30px 0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #d9cd29;
-  font-family: "Arimo", sans-serif;
-  width: 100%;
-  text-align: center;
-}
-
-.home img {
-  width: 40%;
-  border-radius: 50%;
-}
-
-p {
-  color: #fff;
-  font-size: 2em;
+body{
+  font-family: 'Roboto', sans-serif;
 }

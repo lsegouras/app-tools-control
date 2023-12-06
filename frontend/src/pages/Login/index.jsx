@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { schema } from "./../components/schema";
+import { schema } from "../../components/schema";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
-import MyContext from "./../context/MyContext";
+import MyContext from "../../context/MyContext";
+import * as Style from "./style"
 
 const Login = () => {
   // const [login, setLogin] = useState("");
@@ -73,12 +74,12 @@ const Login = () => {
 
   console.log(formik.values);
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={formik.handleSubmit}>
-        <label>
+    <Style.Container>
+      <Style.Title>Login</Style.Title>
+      <Style.Form onSubmit={formik.handleSubmit}>
+        <Style.Label>
           Login (e-mail)
-          <input
+          <Style.InputLogin
             type="text"
             name="login"
             onChange={formik.handleChange}
@@ -90,30 +91,30 @@ const Login = () => {
           ) : (
             ""
           )}
-        </label>
-        <label>
+        </Style.Label>
+        <Style.Label>
           Password
-          <input
+          <Style.InputLogin
             type="password"
             name="password"
             onChange={formik.handleChange}
             value={formik.values.password}
           />
           {formik.errors.password ? (
-            <p style={{ color: "red" }}>{formik.errors.password}</p>
+            <Style.ErrorMessage>{formik.errors.password}</Style.ErrorMessage>
           ) : (
             ""
           )}
-        </label>
-        <button type="submit">Log In</button>
-      </form>
-      <p>
+        </Style.Label>
+        <Style.LoginBtn type="submit">Login</Style.LoginBtn>
+      </Style.Form>
+      <Style.RegisterLink>
         Not registered yet? Click <Link to="/registration">here!</Link>
-      </p>
-      <p>
+      </Style.RegisterLink>
+      <Style.AdminLink>
         Is Admin? Click <Link to="/admin-login">here!</Link>
-      </p>
-    </div>
+      </Style.AdminLink>
+    </Style.Container>
   );
 };
 
