@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { GoTrash } from "react-icons/go";
+import Modal from "./Modal";
+import ToolForm from "./ToolForm";
 
 function GetTools() {
   const [data, setData] = useState([]);
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   useEffect(() => {
     fetchData();
@@ -35,10 +38,14 @@ function GetTools() {
     }
   }
 
+  const handleModal = () => {
+    setIsOpenModal((currentState)=>!currentState)
+  }
+
   return (
     <div>
       <h2>Tool's List</h2>
-      <button type="button">Add New Tool</button>
+      <button type="button" onClick={handleModal}>Add New Tool</button>
       {data?.map((item) => (
         <div key={item.id}>
           <span>Tool Name: {item.id}</span> <br />
@@ -51,6 +58,10 @@ function GetTools() {
           <hr />
         </div>
       ))}
+
+      <Modal title="Add Tool" handleModal={handleModal} isOpenModal={isOpenModal}>
+        <ToolForm />
+      </Modal >
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Modal from '../components/Modal';
+import ToolForm from "../components/ToolForm";
 
 function Tools() {
   const [tools, setTools] = useState([]);

@@ -21,6 +21,11 @@ export const SidebarData = [
     icon: <BsIcons.BsTools />,
   },
   {
+    title: "Reservations",
+    path: "/reservations",
+    icon: <FaIcons.FaHandHolding />,
+  },
+  {
     title: "Loans",
     path: "/loans",
     icon: <FaIcons.FaHandHolding />,

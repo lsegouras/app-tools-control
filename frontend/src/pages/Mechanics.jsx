@@ -1,13 +1,13 @@
 import React from "react";
 import "./Mechanics.css";
-import FormMechanics from "./../components/FormMechanics";
+import RegisterForm from "../components/RegisterForm";
 
 function Mechanics() {
   return (
     <div className="mechanics">
       <h1>Mechanics</h1>
       <div className="mechanicForm">
-        <FormMechanics />
+        <RegisterForm />
       </div>
     </div>
   );

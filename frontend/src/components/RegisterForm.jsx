@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MyContext from "./../context/MyContext";
+import MyContext from "../context/MyContext";
 import axios from "axios";
 import "./Form.css";
 
-function FormMechanics() {
+function RegisterForm() {
   const [data, setData] = useState({
     fullName: "",
     cpf: "",
@@ -139,4 +139,4 @@ function FormMechanics() {
   );
 }
 
-export default FormMechanics;
+export default RegisterForm;
