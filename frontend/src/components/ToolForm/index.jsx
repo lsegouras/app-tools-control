@@ -29,6 +29,9 @@ function ToolForm() {
     body: JSON.stringify(data), 
     });
     console.log(response);
+
+    setName("")
+    setDescription("")
   }
 
   return (
