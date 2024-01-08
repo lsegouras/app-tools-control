@@ -9,7 +9,7 @@ class Admin extends Model {
           validate: {
             notEmpty: { msg: "Admin's login must be filled!" },
             len: {
-              args: [2, 20],
+              args: [2, 50],
               msg: "Admin's login must have between 2 to 20 characters!",
             },
           },

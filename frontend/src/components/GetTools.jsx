@@ -48,10 +48,10 @@ function GetTools() {
       <button type="button" onClick={handleModal}>Add New Tool</button>
       {data?.map((item) => (
         <div key={item.id}>
-          <span>Tool Name: {item.id}</span> <br />
+          <span>Tool Id: {item.id}</span> <br />
           <span>Tool Name: {item.name}</span> <br />
           <span>Tool Description: {item.description}</span>
-          <span>Tool Description: {item.status}</span>
+          <span>Tool Status: {item.status}</span>
           <button onClick={() => handleDelete(item.id)}>
             <GoTrash />
           </button>

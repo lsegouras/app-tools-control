@@ -7,6 +7,7 @@ class AdminService {
       const verifyLogin = await Admin.findOne({
         where: { login: login, password: password },
       });
+      console.log(verifyLogin, login, password);
       if (!verifyLogin) {
         throw new Error("Invalid Login!");
       }

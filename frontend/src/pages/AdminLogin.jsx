@@ -9,6 +9,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
+    console.log(formik.values);
     const response = await fetch("http://localhost:3333/admin", {
       headers: {
         "Content-Type": "application/json",
